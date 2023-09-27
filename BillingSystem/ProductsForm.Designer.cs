@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsForm));
             this.TabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -72,11 +72,16 @@
             this.billingSystemDataSet = new BillingSystem.BillingSystemDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new BillingSystem.BillingSystemDataSetTableAdapters.ProductsTableAdapter();
+            this.BGSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.DPAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.AmberAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.GreyAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.BillPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billingSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -138,27 +143,27 @@
             // DGV
             // 
             this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PIDCol,
             this.PName,
             this.PPrice});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV.DefaultCellStyle = dataGridViewCellStyle14;
             this.DGV.Location = new System.Drawing.Point(21, 71);
             this.DGV.Name = "DGV";
             this.DGV.Size = new System.Drawing.Size(727, 409);
@@ -445,28 +450,28 @@
             // BillDGV
             // 
             this.BillDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BillDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BillPNameCol,
             this.BillPriceCol,
             this.BillQtCol,
             this.BillTotalCol});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle16;
             this.BillDGV.Location = new System.Drawing.Point(21, 83);
             this.BillDGV.Name = "BillDGV";
             this.BillDGV.Size = new System.Drawing.Size(727, 334);
@@ -587,6 +592,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.GreyAccentSwitch);
+            this.tabPage3.Controls.Add(this.AmberAccentSwitch);
+            this.tabPage3.Controls.Add(this.DPAccentSwitch);
+            this.tabPage3.Controls.Add(this.BGSwitch);
             this.tabPage3.ImageKey = "icons8-settings-24.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 31);
             this.tabPage3.Name = "tabPage3";
@@ -617,6 +626,70 @@
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
+            // BGSwitch
+            // 
+            this.BGSwitch.AutoSize = true;
+            this.BGSwitch.Depth = 0;
+            this.BGSwitch.Location = new System.Drawing.Point(20, 28);
+            this.BGSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.BGSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.BGSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BGSwitch.Name = "BGSwitch";
+            this.BGSwitch.Ripple = true;
+            this.BGSwitch.Size = new System.Drawing.Size(196, 37);
+            this.BGSwitch.TabIndex = 0;
+            this.BGSwitch.Text = "Background Theme";
+            this.BGSwitch.UseVisualStyleBackColor = true;
+            this.BGSwitch.CheckedChanged += new System.EventHandler(this.BGSwitch_CheckedChanged);
+            // 
+            // DPAccentSwitch
+            // 
+            this.DPAccentSwitch.AutoSize = true;
+            this.DPAccentSwitch.Depth = 0;
+            this.DPAccentSwitch.Location = new System.Drawing.Point(20, 87);
+            this.DPAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.DPAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.DPAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DPAccentSwitch.Name = "DPAccentSwitch";
+            this.DPAccentSwitch.Ripple = true;
+            this.DPAccentSwitch.Size = new System.Drawing.Size(195, 37);
+            this.DPAccentSwitch.TabIndex = 1;
+            this.DPAccentSwitch.Text = "Deep Purple Accent";
+            this.DPAccentSwitch.UseVisualStyleBackColor = true;
+            this.DPAccentSwitch.CheckedChanged += new System.EventHandler(this.DPAccentSwitch_CheckedChanged);
+            // 
+            // AmberAccentSwitch
+            // 
+            this.AmberAccentSwitch.AutoSize = true;
+            this.AmberAccentSwitch.Depth = 0;
+            this.AmberAccentSwitch.Location = new System.Drawing.Point(20, 149);
+            this.AmberAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.AmberAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.AmberAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.AmberAccentSwitch.Name = "AmberAccentSwitch";
+            this.AmberAccentSwitch.Ripple = true;
+            this.AmberAccentSwitch.Size = new System.Drawing.Size(156, 37);
+            this.AmberAccentSwitch.TabIndex = 2;
+            this.AmberAccentSwitch.Text = "Amber Accent";
+            this.AmberAccentSwitch.UseVisualStyleBackColor = true;
+            this.AmberAccentSwitch.CheckedChanged += new System.EventHandler(this.AmberAccentSwitch_CheckedChanged);
+            // 
+            // GreyAccentSwitch
+            // 
+            this.GreyAccentSwitch.AutoSize = true;
+            this.GreyAccentSwitch.Depth = 0;
+            this.GreyAccentSwitch.Location = new System.Drawing.Point(20, 213);
+            this.GreyAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.GreyAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.GreyAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.GreyAccentSwitch.Name = "GreyAccentSwitch";
+            this.GreyAccentSwitch.Ripple = true;
+            this.GreyAccentSwitch.Size = new System.Drawing.Size(142, 37);
+            this.GreyAccentSwitch.TabIndex = 3;
+            this.GreyAccentSwitch.Text = "Grey Accent";
+            this.GreyAccentSwitch.UseVisualStyleBackColor = true;
+            this.GreyAccentSwitch.CheckedChanged += new System.EventHandler(this.GreyAccentSwitch_CheckedChanged);
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +710,8 @@
             this.BillPage.ResumeLayout(false);
             this.BillPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billingSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -683,5 +758,9 @@
         private MaterialSkin.Controls.MaterialLabel TotalLabel;
         private MaterialSkin.Controls.MaterialButton FinishButton;
         private MaterialSkin.Controls.MaterialComboBox BillProductsCB;
+        private MaterialSkin.Controls.MaterialSwitch BGSwitch;
+        private MaterialSkin.Controls.MaterialSwitch GreyAccentSwitch;
+        private MaterialSkin.Controls.MaterialSwitch AmberAccentSwitch;
+        private MaterialSkin.Controls.MaterialSwitch DPAccentSwitch;
     }
 }

@@ -15,10 +15,11 @@ namespace BillingSystem
 {
     public partial class ProductsForm : MaterialForm
     {
+        MaterialSkinManager materialSkinManager;
         public ProductsForm()
         {
             InitializeComponent();
-            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(
@@ -318,6 +319,88 @@ namespace BillingSystem
 
             BillTotalButton.Text = "";
             BillTotalButton.Text += totalBillAmount.ToString();
+        }
+
+        private void BGSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if(BGSwitch.Checked)
+            {
+                materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            } else
+            {
+                materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            }
+        }
+
+        private void DPAccentSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DPAccentSwitch.Checked)
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.DeepPurple800,
+                    Primary.DeepPurple900,
+                    Primary.DeepPurple500,
+                    Accent.LightBlue200,
+                    TextShade.WHITE
+                );
+            } else
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.Blue800,
+                    Primary.Blue900,
+                    Primary.Blue500,
+                    Accent.LightBlue200,
+                    TextShade.WHITE
+                );
+            }
+        }
+
+        private void AmberAccentSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AmberAccentSwitch.Checked)
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.Amber800,
+                    Primary.Amber900,
+                    Primary.Amber500,
+                    Accent.LightGreen200,
+                    TextShade.WHITE
+                );
+            }
+            else
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.Blue800,
+                    Primary.Blue900,
+                    Primary.Blue500,
+                    Accent.LightBlue200,
+                    TextShade.WHITE
+                );
+            }
+        }
+
+        private void GreyAccentSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (GreyAccentSwitch.Checked)
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.Grey800,
+                    Primary.Grey900,
+                    Primary.Grey500,
+                    Accent.LightBlue200,
+                    TextShade.WHITE
+                );
+            }
+            else
+            {
+                materialSkinManager.ColorScheme = new ColorScheme(
+                    Primary.Blue800,
+                    Primary.Blue900,
+                    Primary.Blue500,
+                    Accent.LightBlue200,
+                    TextShade.WHITE
+                );
+            }
         }
     }
 }
