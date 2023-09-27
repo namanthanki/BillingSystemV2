@@ -1,4 +1,6 @@
-﻿using MaterialSkin;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -400,6 +403,110 @@ namespace BillingSystem
                     Accent.LightBlue200,
                     TextShade.WHITE
                 );
+            }
+        }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            if (BillDGV.Rows.Count == 0)
+            {
+                MessageBox.Show("No items in the bill to print.");
+                return;
+            }
+
+            StringBuilder billText = new StringBuilder();
+
+            billText.AppendLine("========== Bill ==========");
+            billText.AppendLine("Customer Name: " + CustNameTB.Text);
+            billText.AppendLine("Date: " + BillDate.Text);
+            billText.AppendLine("==========================");
+            billText.AppendLine("Products:");
+
+            foreach (DataGridViewRow row in BillDGV.Rows)
+            {
+                if (row.Cells["BillPNameCol"].Value != null &&
+                    row.Cells["BillPriceCol"].Value != null &&
+                    row.Cells["BillQtCol"].Value != null &&
+                    row.Cells["BillTotalCol"].Value != null
+                )
+                {
+                    string productName = row.Cells["BillPNameCol"].Value.ToString();
+                    string price = row.Cells["BillPriceCol"].Value.ToString();
+                    string quantity = row.Cells["BillQtCol"].Value.ToString();
+                    string totalAmount = row.Cells["BillTotalCol"].Value.ToString();
+
+                    billText.AppendLine(productName + "\tPrice: " + price + "\tQuantity: " + quantity + "\tTotal: " + totalAmount);
+                }
+            }
+
+            billText.AppendLine("==========================");
+            billText.AppendLine("Total Bill Amount: " + BillTotalButton.Text);
+            billText.AppendLine("==========================");
+
+            MessageBox.Show(billText.ToString(), "Bill");
+            Document document = new Document();
+
+            string pdfPath = Path.GetTempFileName() + ".pdf";
+
+            try
+            {
+                PdfWriter.GetInstance(document, new FileStream(pdfPath, FileMode.Create));
+
+                document.Open();
+                document.Add(new Paragraph($"Customer Name: {CustNameTB.Text}"));
+                document.Add(new Paragraph($"Date: {BillDate.Text}\n"));
+                document.Add(new Paragraph(""));
+
+
+                PdfPTable table = new PdfPTable(4);
+
+                float[] columnWidths = { 2f, 1f, 1f, 1f };
+                table.SetWidths(columnWidths);
+
+                table.AddCell("ProductName");
+                table.AddCell("Price");
+                table.AddCell("Quantity");
+                table.AddCell("Total");
+
+                foreach (DataGridViewRow row in BillDGV.Rows)
+                {
+                    if (row.Cells["BillPNameCol"].Value != null &&
+                        row.Cells["BillPriceCol"].Value != null &&
+                        row.Cells["BillQtCol"].Value != null &&
+                        row.Cells["BillTotalCol"].Value != null)
+                    {
+                        string productName = row.Cells["BillPNameCol"].Value.ToString();
+                        string price = row.Cells["BillPriceCol"].Value.ToString();
+                        string quantity = row.Cells["BillQtCol"].Value.ToString();
+                        string totalAmount = row.Cells["BillTotalCol"].Value.ToString();
+
+                        table.AddCell(productName);
+                        table.AddCell(price);
+                        table.AddCell(quantity);
+                        table.AddCell(totalAmount);
+                    }
+                }
+
+                document.Add(table);
+                document.Add(new Paragraph($"Total Bill Amount: {BillTotalButton.Text}"));
+
+                document.Close();
+
+                MessageBox.Show($"Bill saved as {pdfPath}", "PDF Saved");
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+                saveFileDialog.FileName = "Bill.pdf";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.Copy(pdfPath, saveFileDialog.FileName, true);
+                    MessageBox.Show("PDF saved successfully.", "PDF Saved");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error creating PDF: {ex.Message}", "Error");
             }
         }
     }
