@@ -53,7 +53,7 @@ namespace BillingSystem
             {
                 try
                 {
-                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
                     SqlConnection sqlConnection = new SqlConnection(connectionString);
                     sqlConnection.Open();
 
@@ -103,7 +103,7 @@ namespace BillingSystem
             {
                 try
                 {
-                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
                     SqlConnection sqlConnection = new SqlConnection(connectionString);
                     sqlConnection.Open();
 

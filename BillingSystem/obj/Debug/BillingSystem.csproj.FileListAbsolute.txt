@@ -16,3 +16,22 @@ C:\Users\thank\source\repos\BillingSystem\BillingSystem\obj\Debug\BillingSystem.
 C:\Users\thank\source\repos\BillingSystem\BillingSystem\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\thank\source\repos\BillingSystem\BillingSystem\bin\Debug\itextsharp.dll
 C:\Users\thank\source\repos\BillingSystem\BillingSystem\bin\Debug\itextsharp.xml
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.csproj.AssemblyReference.cache
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.MainForm.resources
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.ProductsForm.resources
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.Properties.Resources.resources
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.csproj.GenerateResource.cache
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.csproj.CoreCompileInputs.cache
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.exe
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.pdb
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BillingSystem.mdf
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BillingSystem_log.ldf
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BillingSystem.exe.config
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BillingSystem.exe
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BillingSystem.pdb
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\itextsharp.dll
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\MaterialSkin.dll
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\bin\Debug\itextsharp.xml
+C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\obj\Debug\BillingSystem.csproj.CopyComplete

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsForm));
             this.TabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -68,14 +68,14 @@
             this.BillPriceLabel = new MaterialSkin.Controls.MaterialLabel();
             this.BillPNameLabel = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.GreyAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.AmberAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.DPAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.BGSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.billingSystemDataSet = new BillingSystem.BillingSystemDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new BillingSystem.BillingSystemDataSetTableAdapters.ProductsTableAdapter();
-            this.BGSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.DPAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.AmberAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.GreyAccentSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -94,12 +94,13 @@
             this.TabControl.Depth = 0;
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ImageList = this.imageList1;
-            this.TabControl.Location = new System.Drawing.Point(3, 64);
+            this.TabControl.Location = new System.Drawing.Point(4, 79);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.TabControl.Multiline = true;
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(822, 533);
+            this.TabControl.Size = new System.Drawing.Size(1096, 655);
             this.TabControl.TabIndex = 0;
             this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
@@ -115,9 +116,10 @@
             this.tabPage1.Controls.Add(this.PNameLabel);
             this.tabPage1.ImageKey = "icons8-products-24.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(814, 498);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1088, 620);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Products";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -129,12 +131,13 @@
             this.PNameTextBox.Depth = 0;
             this.PNameTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.PNameTextBox.LeadingIcon = null;
-            this.PNameTextBox.Location = new System.Drawing.Point(137, 16);
+            this.PNameTextBox.Location = new System.Drawing.Point(183, 20);
+            this.PNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PNameTextBox.MaxLength = 50;
             this.PNameTextBox.MouseState = MaterialSkin.MouseState.OUT;
             this.PNameTextBox.Multiline = false;
             this.PNameTextBox.Name = "PNameTextBox";
-            this.PNameTextBox.Size = new System.Drawing.Size(185, 36);
+            this.PNameTextBox.Size = new System.Drawing.Size(247, 36);
             this.PNameTextBox.TabIndex = 9;
             this.PNameTextBox.Text = "";
             this.PNameTextBox.TrailingIcon = null;
@@ -142,47 +145,54 @@
             // 
             // DGV
             // 
+            this.DGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PIDCol,
             this.PName,
             this.PPrice});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV.DefaultCellStyle = dataGridViewCellStyle20;
-            this.DGV.Location = new System.Drawing.Point(21, 71);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV.Location = new System.Drawing.Point(28, 87);
+            this.DGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV.Name = "DGV";
-            this.DGV.Size = new System.Drawing.Size(727, 409);
+            this.DGV.RowHeadersWidth = 51;
+            this.DGV.Size = new System.Drawing.Size(969, 503);
             this.DGV.TabIndex = 8;
             this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
             // 
             // PIDCol
             // 
             this.PIDCol.HeaderText = "ID";
+            this.PIDCol.MinimumWidth = 6;
             this.PIDCol.Name = "PIDCol";
             // 
             // PName
             // 
             this.PName.HeaderText = "Product Name";
+            this.PName.MinimumWidth = 6;
             this.PName.Name = "PName";
             // 
             // PPrice
             // 
             this.PPrice.HeaderText = "Price";
+            this.PPrice.MinimumWidth = 6;
             this.PPrice.Name = "PPrice";
             // 
             // DeleteButton
@@ -192,8 +202,8 @@
             this.DeleteButton.Depth = 0;
             this.DeleteButton.HighEmphasis = true;
             this.DeleteButton.Icon = null;
-            this.DeleteButton.Location = new System.Drawing.Point(675, 16);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.DeleteButton.Location = new System.Drawing.Point(900, 20);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -212,8 +222,8 @@
             this.PUpdateButton.Depth = 0;
             this.PUpdateButton.HighEmphasis = true;
             this.PUpdateButton.Icon = null;
-            this.PUpdateButton.Location = new System.Drawing.Point(590, 16);
-            this.PUpdateButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.PUpdateButton.Location = new System.Drawing.Point(787, 20);
+            this.PUpdateButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.PUpdateButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.PUpdateButton.Name = "PUpdateButton";
             this.PUpdateButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -232,8 +242,8 @@
             this.PAddButton.Depth = 0;
             this.PAddButton.HighEmphasis = true;
             this.PAddButton.Icon = null;
-            this.PAddButton.Location = new System.Drawing.Point(518, 16);
-            this.PAddButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.PAddButton.Location = new System.Drawing.Point(691, 20);
+            this.PAddButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.PAddButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.PAddButton.Name = "PAddButton";
             this.PAddButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -252,12 +262,13 @@
             this.PriceTextBox.Depth = 0;
             this.PriceTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.PriceTextBox.LeadingIcon = null;
-            this.PriceTextBox.Location = new System.Drawing.Point(395, 16);
+            this.PriceTextBox.Location = new System.Drawing.Point(527, 20);
+            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PriceTextBox.MaxLength = 50;
             this.PriceTextBox.MouseState = MaterialSkin.MouseState.OUT;
             this.PriceTextBox.Multiline = false;
             this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(100, 36);
+            this.PriceTextBox.Size = new System.Drawing.Size(133, 36);
             this.PriceTextBox.TabIndex = 3;
             this.PriceTextBox.Text = "";
             this.PriceTextBox.TrailingIcon = null;
@@ -268,7 +279,8 @@
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Depth = 0;
             this.PriceLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.PriceLabel.Location = new System.Drawing.Point(340, 16);
+            this.PriceLabel.Location = new System.Drawing.Point(453, 20);
+            this.PriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PriceLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(36, 19);
@@ -280,7 +292,8 @@
             this.PNameLabel.AutoSize = true;
             this.PNameLabel.Depth = 0;
             this.PNameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.PNameLabel.Location = new System.Drawing.Point(18, 19);
+            this.PNameLabel.Location = new System.Drawing.Point(24, 23);
+            this.PNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PNameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.PNameLabel.Name = "PNameLabel";
             this.PNameLabel.Size = new System.Drawing.Size(102, 19);
@@ -306,9 +319,10 @@
             this.BillPage.Controls.Add(this.BillPNameLabel);
             this.BillPage.ImageKey = "icons8-bill-24.png";
             this.BillPage.Location = new System.Drawing.Point(4, 31);
+            this.BillPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillPage.Name = "BillPage";
-            this.BillPage.Padding = new System.Windows.Forms.Padding(3);
-            this.BillPage.Size = new System.Drawing.Size(814, 498);
+            this.BillPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BillPage.Size = new System.Drawing.Size(1088, 620);
             this.BillPage.TabIndex = 1;
             this.BillPage.Text = "Bill";
             this.BillPage.UseVisualStyleBackColor = true;
@@ -322,16 +336,17 @@
             this.BillProductsCB.DropDownHeight = 174;
             this.BillProductsCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BillProductsCB.DropDownWidth = 121;
-            this.BillProductsCB.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.BillProductsCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.BillProductsCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BillProductsCB.FormattingEnabled = true;
             this.BillProductsCB.IntegralHeight = false;
             this.BillProductsCB.ItemHeight = 43;
-            this.BillProductsCB.Location = new System.Drawing.Point(126, 19);
+            this.BillProductsCB.Location = new System.Drawing.Point(168, 23);
+            this.BillProductsCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillProductsCB.MaxDropDownItems = 4;
             this.BillProductsCB.MouseState = MaterialSkin.MouseState.OUT;
             this.BillProductsCB.Name = "BillProductsCB";
-            this.BillProductsCB.Size = new System.Drawing.Size(121, 49);
+            this.BillProductsCB.Size = new System.Drawing.Size(160, 49);
             this.BillProductsCB.StartIndex = 0;
             this.BillProductsCB.TabIndex = 17;
             this.BillProductsCB.SelectedIndexChanged += new System.EventHandler(this.BillProductsCB_SelectedIndexChanged);
@@ -343,8 +358,8 @@
             this.FinishButton.Depth = 0;
             this.FinishButton.HighEmphasis = true;
             this.FinishButton.Icon = null;
-            this.FinishButton.Location = new System.Drawing.Point(658, 448);
-            this.FinishButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.FinishButton.Location = new System.Drawing.Point(877, 551);
+            this.FinishButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.FinishButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -364,12 +379,13 @@
             this.BillDate.Enabled = false;
             this.BillDate.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BillDate.LeadingIcon = null;
-            this.BillDate.Location = new System.Drawing.Point(456, 456);
+            this.BillDate.Location = new System.Drawing.Point(608, 561);
+            this.BillDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillDate.MaxLength = 50;
             this.BillDate.MouseState = MaterialSkin.MouseState.OUT;
             this.BillDate.Multiline = false;
             this.BillDate.Name = "BillDate";
-            this.BillDate.Size = new System.Drawing.Size(128, 36);
+            this.BillDate.Size = new System.Drawing.Size(171, 36);
             this.BillDate.TabIndex = 15;
             this.BillDate.Text = "";
             this.BillDate.TrailingIcon = null;
@@ -380,7 +396,8 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.Depth = 0;
             this.DateLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DateLabel.Location = new System.Drawing.Point(499, 434);
+            this.DateLabel.Location = new System.Drawing.Point(665, 534);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(34, 19);
@@ -395,12 +412,13 @@
             this.BillTotalButton.Enabled = false;
             this.BillTotalButton.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BillTotalButton.LeadingIcon = null;
-            this.BillTotalButton.Location = new System.Drawing.Point(205, 456);
+            this.BillTotalButton.Location = new System.Drawing.Point(273, 561);
+            this.BillTotalButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillTotalButton.MaxLength = 50;
             this.BillTotalButton.MouseState = MaterialSkin.MouseState.OUT;
             this.BillTotalButton.Multiline = false;
             this.BillTotalButton.Name = "BillTotalButton";
-            this.BillTotalButton.Size = new System.Drawing.Size(174, 36);
+            this.BillTotalButton.Size = new System.Drawing.Size(232, 36);
             this.BillTotalButton.TabIndex = 13;
             this.BillTotalButton.Text = "";
             this.BillTotalButton.TrailingIcon = null;
@@ -411,7 +429,8 @@
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.Depth = 0;
             this.TotalLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.TotalLabel.Location = new System.Drawing.Point(249, 434);
+            this.TotalLabel.Location = new System.Drawing.Point(332, 534);
+            this.TotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(98, 19);
@@ -425,12 +444,13 @@
             this.CustNameTB.Depth = 0;
             this.CustNameTB.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.CustNameTB.LeadingIcon = null;
-            this.CustNameTB.Location = new System.Drawing.Point(17, 456);
+            this.CustNameTB.Location = new System.Drawing.Point(23, 561);
+            this.CustNameTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustNameTB.MaxLength = 50;
             this.CustNameTB.MouseState = MaterialSkin.MouseState.OUT;
             this.CustNameTB.Multiline = false;
             this.CustNameTB.Name = "CustNameTB";
-            this.CustNameTB.Size = new System.Drawing.Size(112, 36);
+            this.CustNameTB.Size = new System.Drawing.Size(149, 36);
             this.CustNameTB.TabIndex = 11;
             this.CustNameTB.Text = "";
             this.CustNameTB.TrailingIcon = null;
@@ -441,7 +461,8 @@
             this.CustNameLabel.AutoSize = true;
             this.CustNameLabel.Depth = 0;
             this.CustNameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.CustNameLabel.Location = new System.Drawing.Point(18, 434);
+            this.CustNameLabel.Location = new System.Drawing.Point(24, 534);
+            this.CustNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CustNameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.CustNameLabel.Name = "CustNameLabel";
             this.CustNameLabel.Size = new System.Drawing.Size(115, 19);
@@ -450,53 +471,61 @@
             // 
             // BillDGV
             // 
+            this.BillDGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BillDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BillDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BillPNameCol,
             this.BillPriceCol,
             this.BillQtCol,
             this.BillTotalCol});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle18;
-            this.BillDGV.Location = new System.Drawing.Point(21, 83);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            this.BillDGV.Location = new System.Drawing.Point(28, 102);
+            this.BillDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillDGV.Name = "BillDGV";
-            this.BillDGV.Size = new System.Drawing.Size(727, 334);
+            this.BillDGV.RowHeadersWidth = 51;
+            this.BillDGV.Size = new System.Drawing.Size(969, 411);
             this.BillDGV.TabIndex = 9;
             this.BillDGV.SelectionChanged += new System.EventHandler(this.BillDGV_SelectionChanged);
             // 
             // BillPNameCol
             // 
             this.BillPNameCol.HeaderText = "Product Name";
+            this.BillPNameCol.MinimumWidth = 6;
             this.BillPNameCol.Name = "BillPNameCol";
             // 
             // BillPriceCol
             // 
             this.BillPriceCol.HeaderText = "Price";
+            this.BillPriceCol.MinimumWidth = 6;
             this.BillPriceCol.Name = "BillPriceCol";
             // 
             // BillQtCol
             // 
             this.BillQtCol.HeaderText = "Quantity";
+            this.BillQtCol.MinimumWidth = 6;
             this.BillQtCol.Name = "BillQtCol";
             // 
             // BillTotalCol
             // 
             this.BillTotalCol.HeaderText = "Total Amount";
+            this.BillTotalCol.MinimumWidth = 6;
             this.BillTotalCol.Name = "BillTotalCol";
             // 
             // AddButton
@@ -506,8 +535,8 @@
             this.AddButton.Depth = 0;
             this.AddButton.HighEmphasis = true;
             this.AddButton.Icon = null;
-            this.AddButton.Location = new System.Drawing.Point(660, 22);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AddButton.Location = new System.Drawing.Point(880, 27);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.AddButton.Name = "AddButton";
             this.AddButton.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -526,12 +555,13 @@
             this.BillQtTB.Depth = 0;
             this.BillQtTB.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BillQtTB.LeadingIcon = null;
-            this.BillQtTB.Location = new System.Drawing.Point(542, 20);
+            this.BillQtTB.Location = new System.Drawing.Point(723, 25);
+            this.BillQtTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillQtTB.MaxLength = 50;
             this.BillQtTB.MouseState = MaterialSkin.MouseState.OUT;
             this.BillQtTB.Multiline = false;
             this.BillQtTB.Name = "BillQtTB";
-            this.BillQtTB.Size = new System.Drawing.Size(100, 36);
+            this.BillQtTB.Size = new System.Drawing.Size(133, 36);
             this.BillQtTB.TabIndex = 7;
             this.BillQtTB.Text = "";
             this.BillQtTB.TrailingIcon = null;
@@ -542,7 +572,8 @@
             this.BillQtLabel.AutoSize = true;
             this.BillQtLabel.Depth = 0;
             this.BillQtLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BillQtLabel.Location = new System.Drawing.Point(475, 31);
+            this.BillQtLabel.Location = new System.Drawing.Point(633, 38);
+            this.BillQtLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BillQtLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.BillQtLabel.Name = "BillQtLabel";
             this.BillQtLabel.Size = new System.Drawing.Size(61, 19);
@@ -556,12 +587,13 @@
             this.BillPriceTB.Depth = 0;
             this.BillPriceTB.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BillPriceTB.LeadingIcon = null;
-            this.BillPriceTB.Location = new System.Drawing.Point(353, 22);
+            this.BillPriceTB.Location = new System.Drawing.Point(471, 27);
+            this.BillPriceTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillPriceTB.MaxLength = 50;
             this.BillPriceTB.MouseState = MaterialSkin.MouseState.OUT;
             this.BillPriceTB.Multiline = false;
             this.BillPriceTB.Name = "BillPriceTB";
-            this.BillPriceTB.Size = new System.Drawing.Size(100, 36);
+            this.BillPriceTB.Size = new System.Drawing.Size(133, 36);
             this.BillPriceTB.TabIndex = 5;
             this.BillPriceTB.Text = "";
             this.BillPriceTB.TrailingIcon = null;
@@ -572,7 +604,8 @@
             this.BillPriceLabel.AutoSize = true;
             this.BillPriceLabel.Depth = 0;
             this.BillPriceLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BillPriceLabel.Location = new System.Drawing.Point(311, 31);
+            this.BillPriceLabel.Location = new System.Drawing.Point(415, 38);
+            this.BillPriceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BillPriceLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.BillPriceLabel.Name = "BillPriceLabel";
             this.BillPriceLabel.Size = new System.Drawing.Size(36, 19);
@@ -584,7 +617,8 @@
             this.BillPNameLabel.AutoSize = true;
             this.BillPNameLabel.Depth = 0;
             this.BillPNameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BillPNameLabel.Location = new System.Drawing.Point(18, 31);
+            this.BillPNameLabel.Location = new System.Drawing.Point(24, 38);
+            this.BillPNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BillPNameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.BillPNameLabel.Name = "BillPNameLabel";
             this.BillPNameLabel.Size = new System.Drawing.Size(102, 19);
@@ -599,11 +633,76 @@
             this.tabPage3.Controls.Add(this.BGSwitch);
             this.tabPage3.ImageKey = "icons8-settings-24.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(814, 498);
+            this.tabPage3.Size = new System.Drawing.Size(1088, 621);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Settings";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // GreyAccentSwitch
+            // 
+            this.GreyAccentSwitch.AutoSize = true;
+            this.GreyAccentSwitch.Depth = 0;
+            this.GreyAccentSwitch.Location = new System.Drawing.Point(27, 262);
+            this.GreyAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.GreyAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.GreyAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.GreyAccentSwitch.Name = "GreyAccentSwitch";
+            this.GreyAccentSwitch.Ripple = true;
+            this.GreyAccentSwitch.Size = new System.Drawing.Size(142, 37);
+            this.GreyAccentSwitch.TabIndex = 3;
+            this.GreyAccentSwitch.Text = "Grey Accent";
+            this.GreyAccentSwitch.UseVisualStyleBackColor = true;
+            this.GreyAccentSwitch.CheckedChanged += new System.EventHandler(this.GreyAccentSwitch_CheckedChanged);
+            // 
+            // AmberAccentSwitch
+            // 
+            this.AmberAccentSwitch.AutoSize = true;
+            this.AmberAccentSwitch.Depth = 0;
+            this.AmberAccentSwitch.Location = new System.Drawing.Point(27, 183);
+            this.AmberAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.AmberAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.AmberAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.AmberAccentSwitch.Name = "AmberAccentSwitch";
+            this.AmberAccentSwitch.Ripple = true;
+            this.AmberAccentSwitch.Size = new System.Drawing.Size(156, 37);
+            this.AmberAccentSwitch.TabIndex = 2;
+            this.AmberAccentSwitch.Text = "Amber Accent";
+            this.AmberAccentSwitch.UseVisualStyleBackColor = true;
+            this.AmberAccentSwitch.CheckedChanged += new System.EventHandler(this.AmberAccentSwitch_CheckedChanged);
+            // 
+            // DPAccentSwitch
+            // 
+            this.DPAccentSwitch.AutoSize = true;
+            this.DPAccentSwitch.Depth = 0;
+            this.DPAccentSwitch.Location = new System.Drawing.Point(27, 107);
+            this.DPAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.DPAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.DPAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DPAccentSwitch.Name = "DPAccentSwitch";
+            this.DPAccentSwitch.Ripple = true;
+            this.DPAccentSwitch.Size = new System.Drawing.Size(195, 37);
+            this.DPAccentSwitch.TabIndex = 1;
+            this.DPAccentSwitch.Text = "Deep Purple Accent";
+            this.DPAccentSwitch.UseVisualStyleBackColor = true;
+            this.DPAccentSwitch.CheckedChanged += new System.EventHandler(this.DPAccentSwitch_CheckedChanged);
+            // 
+            // BGSwitch
+            // 
+            this.BGSwitch.AutoSize = true;
+            this.BGSwitch.Depth = 0;
+            this.BGSwitch.Location = new System.Drawing.Point(27, 34);
+            this.BGSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.BGSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.BGSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BGSwitch.Name = "BGSwitch";
+            this.BGSwitch.Ripple = true;
+            this.BGSwitch.Size = new System.Drawing.Size(196, 37);
+            this.BGSwitch.TabIndex = 0;
+            this.BGSwitch.Text = "Background Theme";
+            this.BGSwitch.UseVisualStyleBackColor = true;
+            this.BGSwitch.CheckedChanged += new System.EventHandler(this.BGSwitch_CheckedChanged);
             // 
             // imageList1
             // 
@@ -627,80 +726,18 @@
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
-            // BGSwitch
-            // 
-            this.BGSwitch.AutoSize = true;
-            this.BGSwitch.Depth = 0;
-            this.BGSwitch.Location = new System.Drawing.Point(20, 28);
-            this.BGSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.BGSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.BGSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BGSwitch.Name = "BGSwitch";
-            this.BGSwitch.Ripple = true;
-            this.BGSwitch.Size = new System.Drawing.Size(196, 37);
-            this.BGSwitch.TabIndex = 0;
-            this.BGSwitch.Text = "Background Theme";
-            this.BGSwitch.UseVisualStyleBackColor = true;
-            this.BGSwitch.CheckedChanged += new System.EventHandler(this.BGSwitch_CheckedChanged);
-            // 
-            // DPAccentSwitch
-            // 
-            this.DPAccentSwitch.AutoSize = true;
-            this.DPAccentSwitch.Depth = 0;
-            this.DPAccentSwitch.Location = new System.Drawing.Point(20, 87);
-            this.DPAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.DPAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.DPAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DPAccentSwitch.Name = "DPAccentSwitch";
-            this.DPAccentSwitch.Ripple = true;
-            this.DPAccentSwitch.Size = new System.Drawing.Size(195, 37);
-            this.DPAccentSwitch.TabIndex = 1;
-            this.DPAccentSwitch.Text = "Deep Purple Accent";
-            this.DPAccentSwitch.UseVisualStyleBackColor = true;
-            this.DPAccentSwitch.CheckedChanged += new System.EventHandler(this.DPAccentSwitch_CheckedChanged);
-            // 
-            // AmberAccentSwitch
-            // 
-            this.AmberAccentSwitch.AutoSize = true;
-            this.AmberAccentSwitch.Depth = 0;
-            this.AmberAccentSwitch.Location = new System.Drawing.Point(20, 149);
-            this.AmberAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.AmberAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.AmberAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AmberAccentSwitch.Name = "AmberAccentSwitch";
-            this.AmberAccentSwitch.Ripple = true;
-            this.AmberAccentSwitch.Size = new System.Drawing.Size(156, 37);
-            this.AmberAccentSwitch.TabIndex = 2;
-            this.AmberAccentSwitch.Text = "Amber Accent";
-            this.AmberAccentSwitch.UseVisualStyleBackColor = true;
-            this.AmberAccentSwitch.CheckedChanged += new System.EventHandler(this.AmberAccentSwitch_CheckedChanged);
-            // 
-            // GreyAccentSwitch
-            // 
-            this.GreyAccentSwitch.AutoSize = true;
-            this.GreyAccentSwitch.Depth = 0;
-            this.GreyAccentSwitch.Location = new System.Drawing.Point(20, 213);
-            this.GreyAccentSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.GreyAccentSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.GreyAccentSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.GreyAccentSwitch.Name = "GreyAccentSwitch";
-            this.GreyAccentSwitch.Ripple = true;
-            this.GreyAccentSwitch.Size = new System.Drawing.Size(142, 37);
-            this.GreyAccentSwitch.TabIndex = 3;
-            this.GreyAccentSwitch.Text = "Grey Accent";
-            this.GreyAccentSwitch.UseVisualStyleBackColor = true;
-            this.GreyAccentSwitch.CheckedChanged += new System.EventHandler(this.GreyAccentSwitch_CheckedChanged);
-            // 
             // ProductsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 600);
+            this.ClientSize = new System.Drawing.Size(1104, 738);
             this.Controls.Add(this.TabControl);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.TabControl;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "ProductsForm";
+            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Sizable = false;
             this.Text = "Billing System";
             this.Load += new System.EventHandler(this.ProductsForm_Load);

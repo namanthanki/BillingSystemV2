@@ -38,7 +38,7 @@ namespace BillingSystem
         {
             DGV.Rows.Clear();
 
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -67,7 +67,7 @@ namespace BillingSystem
 
         private void FillBillProductNames()
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -103,7 +103,7 @@ namespace BillingSystem
 
         private void PAddButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -181,7 +181,7 @@ namespace BillingSystem
 
                 if (!string.IsNullOrEmpty(newName) && int.TryParse(newPrice, out int price))
                 {
-                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
@@ -226,7 +226,7 @@ namespace BillingSystem
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -268,7 +268,7 @@ namespace BillingSystem
 
         private void BillProductsCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thank\source\repos\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naman\Documents\B.Tech\Third Year\Fifth Semester\C#\project\BillingSystem\BillingSystem\BillingSystem.mdf;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -455,8 +455,10 @@ namespace BillingSystem
                 document.Open();
                 document.Add(new Paragraph($"Customer Name: {CustNameTB.Text}"));
                 document.Add(new Paragraph($"Date: {BillDate.Text}\n"));
-                document.Add(new Paragraph(""));
 
+                Paragraph p = new Paragraph();
+                p.SpacingAfter = 25f;
+                document.Add(p);
 
                 PdfPTable table = new PdfPTable(4);
 
